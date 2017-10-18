@@ -1,0 +1,305 @@
+* 
+{
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper{
+    font-family: Calibri Regular, sans-serif;
+	max-width: 1180px;	
+    min-width: 980px;
+	margin: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*------------------HEADER------------------*/
+
+.header{
+    height: 63px;
+    border-bottom: 2px solid #e3fc97;
+}
+
+.header__logo{
+	float: left;
+	
+	margin: 5px 40px 5px 20px;
+}
+
+.header__text{
+
+	padding-left: 120px;
+	padding-top: 20px;
+	padding-right: 10px;
+	font-family: Comic Sans MS, sans-serif;
+	font-size: 20px;
+}
+
+.header__personal-greeting{
+	float: right;
+}
+
+.header__login-icon{
+
+   width: 30px;
+   height: 30px;
+   background: url(../img/2323.png) no-repeat top right;
+   float: right;
+   margin-left: 30px; 
+   
+}
+
+
+/*---------------------SEARCH-------------*/
+
+
+.search{
+	padding: 20px 10px 20px 10px;
+/*background-color: #e3fc97*/;
+}
+
+.search__field{
+	width: 85%;
+	padding: 5px 5px 5px 5px;
+	border:2px solid;
+	color: black;
+}
+
+.search__button{
+	padding: 6px 6px;
+	border-radius: 3px;
+	border: none ;
+	font-family: Docker, sans-serif;
+	font-weight: bold;
+	color: white;
+	font-size: 15px;
+	width: 100px;
+	background-color: #addc22; 
+	float: right;
+	
+}
+
+.search__field:focus{
+	outline: none;
+	border:2px solid #292a25;	
+}
+
+.search__tags{
+	margin-top: 10px;
+}
+
+.search__tags_example{
+	font-family: Docker, sans-serif;
+	font-weight: bold;
+	font-size: 15px;
+	margin-right: 20px;
+}
+
+.search__tags_popular{
+	font-family: Docker, sans-serif;
+	font-size: 15px;
+	margin-right: 20px;
+}
+
+/*---------------------Image preview-------------*/
+
+.images{
+	/*background-color: red;*/
+	padding: 10px;
+}
+
+.images__line{
+	width: 100%;
+
+	
+}
+
+.images__line_item{
+
+	
+	width: 25%;
+	float: left;
+	
+}
+
+.images__line_item-img{
+	margin: 10px;
+}
+.images__line_item-img-picture{
+	width: 100%;
+	height: 180px;
+	
+}
+
+.images__line_item-add-picture{
+	width: 100%;
+	height: 140px;
+	background: url(../img/Add2.png) no-repeat center;
+	/*background-color: green;*/
+
+}
+
+.images__line_item-add-text{
+	font-family: Calibri Regular, sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+	display: block;
+	text-align: center;
+	padding: 5px;
+}
+
+.images{
+	
+}
+
+/*---------------------Add Image-------------*/
+
+.add{
+	border:2px solid;
+	background-color: #e3fc97;
+	width: 75%;
+	margin: auto;
+	padding: 15px;
+	
+
+}
+
+.add__image{
+border:2px solid;
+float: left;
+width: 50%;
+
+}
+
+.add__info{
+
+float: right;
+width: 45%;
+
+}
+
+.add__image_title{
+    padding-bottom: 15px;
+	font-family: Docker, sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	display: block;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.add__info-form{
+	
+	outline: 1px solid #dee4e6;
+	
+}
+
+.add__info_item{
+    width: 95%;
+	display: block;
+	margin-top: 15px;
+    padding: 5px 5px 5px 5px;
+	border:2px solid;
+	color: black;
+
+}
+
+.add__info_item:focus{
+	outline: none;
+	
+}
+
+.add__info_label{
+	margin-bottom: 20px;
+	font-family: Docker, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	display: block;
+}
+
+.add__info_button-sent{
+
+	padding: 10px 60px;
+	border-radius: 3px;
+	border: none ;
+	font-family: Docker, sans-serif;
+	font-weight: bold;
+	color: white;
+	font-size: 15px;
+	
+	background-color: #addc22; 
+	
+	
+}
+
+.add__info_button-sent:focus{
+	outline: none;
+}
+
+.add__image_db{
+    border-top: 2px solid #d3dddf;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.add__image_db-label{
+	font-family: Docker, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+
+}
+
+.add__image_db-fakebutton{
+	width: 25px;
+    border-radius: 3px;
+    height: 25px;
+	margin-bottom: -7px;
+	background: url(../img/1234.png) no-repeat center ;
+    background-color: #addc22;
+	border: 0px;
+	display: inline-block;
+	margin-left: 25px;
+
+}
+
+.add__image_db-button{
+	display: none;
+}
+
+.add__image_dd{
+
+width: 100%;
+max-height: 350px;
+}
+
+.add__image_dd-pic{
+	width: 60%;
+	margin-left: 20%;
+
+}
+
+.add__image_dd-text{
+	font-weight: bold;
+	font-size: 20px;
+	display: block;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.add__image_dd-text-sign{
+	font-family: Comic Sans MS, sans-serif;
+	font-size: 15px;
+	display: block;
+	text-align: center;
+	margin-bottom: 10px;
+
+}
+
