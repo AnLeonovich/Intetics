@@ -1,7 +1,7 @@
 * 
 {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .wrapper{
@@ -19,7 +19,9 @@
     clear: both;
 }
 
+
 /*------------------HEADER------------------*/
+
 
 .header{
     height: 63px;
@@ -28,12 +30,10 @@
 
 .header__logo{
 	float: left;
-	
 	margin: 5px 40px 5px 20px;
 }
 
 .header__text{
-
 	padding-left: 120px;
 	padding-top: 20px;
 	padding-right: 10px;
@@ -46,13 +46,11 @@
 }
 
 .header__login-icon{
-
-   width: 30px;
-   height: 30px;
-   background: url(../img/2323.png) no-repeat top right;
-   float: right;
-   margin-left: 30px; 
-   
+    width: 30px;
+    height: 30px;
+    background: url(../img/login.png) no-repeat top right;
+    float: right;
+    margin-left: 30px;  
 }
 
 
@@ -61,7 +59,6 @@
 
 .search{
 	padding: 20px 10px 20px 10px;
-/*background-color: #e3fc97*/;
 }
 
 .search__field{
@@ -69,20 +66,21 @@
 	padding: 5px 5px 5px 5px;
 	border:2px solid;
 	color: black;
+	font-family: Comic Sans MS, sans-serif;
+	font-size: 15px;
 }
 
 .search__button{
-	padding: 6px 6px;
+	padding: 9px 6px;
 	border-radius: 3px;
-	border: none ;
+	border: none;
 	font-family: Docker, sans-serif;
 	font-weight: bold;
 	color: white;
 	font-size: 15px;
 	width: 100px;
 	background-color: #addc22; 
-	float: right;
-	
+	float: right;	
 }
 
 .search__field:focus{
@@ -92,6 +90,7 @@
 
 .search__tags{
 	margin-top: 10px;
+	display: none;
 }
 
 .search__tags_example{
@@ -107,42 +106,69 @@
 	margin-right: 20px;
 }
 
-/*---------------------Image preview-------------*/
+.search__button:hover{
+    background-color: #90be0b;
+}
+
+.search__button:focus{
+    outline: none;
+    background-color: #cff365;
+}
+
+.ui-menu .ui-menu-item{
+    margin: 0;
+    cursor: pointer;
+    list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+    font-family: Comic Sans MS, sans-serif;
+	font-size: 15px;
+	padding: 5px 10px;
+}
+
+.ui-menu{
+	display: block;
+	background-color: white;
+	border: 2px black solid; 
+	border-top: none;
+	width: 72.8% !important;
+	min-width: 812px;
+}
+
+.ui-menu-item:hover{
+	background-color: #e1f89f;
+}
+
+
+/*---------------------IMAGE PREVIEW-------------*/
+
 
 .images{
-	/*background-color: red;*/
+	background-color: #ebfabe;
 	padding: 10px;
 }
 
 .images__line{
 	width: 100%;
-
-	
 }
 
-.images__line_item{
-
-	
+.images__line_item{	
 	width: 25%;
-	float: left;
-	
+	float: left;	
 }
 
 .images__line_item-img{
 	margin: 10px;
 }
+
 .images__line_item-img-picture{
 	width: 100%;
-	height: 180px;
-	
+	height: 180px;	
+	cursor:pointer;
 }
 
 .images__line_item-add-picture{
 	width: 100%;
 	height: 140px;
-	background: url(../img/Add2.png) no-repeat center;
-	/*background-color: green;*/
-
+	background: url(../img/Add-pic.png) no-repeat center;
 }
 
 .images__line_item-add-text{
@@ -154,34 +180,56 @@
 	padding: 5px;
 }
 
-.images{
-	
+.popup {
+    position: absolute;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    display:none;
+    text-align:center;
 }
 
-/*---------------------Add Image-------------*/
+.popup_bg {
+    background:rgba(0,0,0,0.9);
+    position:absolute;
+    z-index:1;
+    height:125%;
+    width:100%;
+}
+
+.popup_img {
+    position: relative;
+    margin:0 auto;
+    z-index:2;
+    max-height:94%;
+    max-width:94%;
+    margin:2% 0 0 0;
+}
+
+/*---------------------ADD IMAGE-------------*/
+
 
 .add{
 	border:2px solid;
-	background-color: #e3fc97;
+	background-color: #e1f89f;
 	width: 75%;
-	margin: auto;
 	padding: 15px;
-	
-
+	position: absolute; 
+    top: 100px; 
+    left: 150px;
+    display: none;
 }
 
 .add__image{
-border:2px solid;
-float: left;
-width: 50%;
-
+    border:2px solid;
+    float: left;
+    width: 50%;
 }
 
 .add__info{
-
-float: right;
-width: 45%;
-
+    float: right;
+    width: 45%;
 }
 
 .add__image_title{
@@ -195,9 +243,7 @@ width: 45%;
 }
 
 .add__info-form{
-	
-	outline: 1px solid #dee4e6;
-	
+	outline: 1px solid #dee4e6;	
 }
 
 .add__info_item{
@@ -207,12 +253,10 @@ width: 45%;
     padding: 5px 5px 5px 5px;
 	border:2px solid;
 	color: black;
-
 }
 
 .add__info_item:focus{
-	outline: none;
-	
+	outline: none;	
 }
 
 .add__info_label{
@@ -224,18 +268,14 @@ width: 45%;
 }
 
 .add__info_button-sent{
-
 	padding: 10px 60px;
 	border-radius: 3px;
 	border: none ;
 	font-family: Docker, sans-serif;
 	font-weight: bold;
 	color: white;
-	font-size: 15px;
-	
-	background-color: #addc22; 
-	
-	
+	font-size: 15px;	
+	background-color: #addc22; 	
 }
 
 .add__info_button-sent:focus{
@@ -254,7 +294,6 @@ width: 45%;
 	font-weight: bold;
 	text-align: center;
 	display: block;
-
 }
 
 .add__image_db-fakebutton{
@@ -262,12 +301,11 @@ width: 45%;
     border-radius: 3px;
     height: 25px;
 	margin-bottom: -7px;
-	background: url(../img/1234.png) no-repeat center ;
+	background: url(../img/plus.png) no-repeat center ;
     background-color: #addc22;
 	border: 0px;
 	display: inline-block;
 	margin-left: 25px;
-
 }
 
 .add__image_db-button{
@@ -275,15 +313,12 @@ width: 45%;
 }
 
 .add__image_dd{
-
-width: 100%;
-max-height: 350px;
+    width: 100%;
 }
 
 .add__image_dd-pic{
 	width: 60%;
 	margin-left: 20%;
-
 }
 
 .add__image_dd-text{
@@ -300,6 +335,86 @@ max-height: 350px;
 	display: block;
 	text-align: center;
 	margin-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
 
+.add__info_button-sent:hover,
+.add__image_db-fakebutton:hover{
+    background-color: #90be0b;
+}
+
+.add__info_button-sent:focus,
+.add__image_db-fakebutton:focus{
+    outline: none;
+    background-color: #cff365;
+}
+
+.add__image_close{
+	width: 15px;
+	height: 15px;
+	background: url(../img/cross.png) no-repeat center ;
+	float:right;
+    margin-top: -40px;
+    margin-right: 5px;
+}
+
+
+/*---------------------PAGES-------------*/
+
+
+.pager{
+	width: 100px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	margin: auto;
+	
+}
+.pager__button{
+	padding: 9px 6px;
+	border-radius: 3px;
+	border: none;
+	font-weight: bold;
+	color: white;
+	font-size: 15px;
+	width: 100px;
+	background-color: #addc22; 		
+}
+
+.pager__button:hover{
+    background-color: #90be0b;
+}
+
+.pager__button:focus{
+    outline: none;
+    background-color: #cff365;
+}
+
+.pager__link{
+    text-decoration: none; 
+    display: inline-block;
+}
+
+.prev{
+	margin-right: 50px;
+}
+
+.pager__second{
+	width: 255px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	margin: auto;	
+}
+
+.disabled{
+	pointer-events: none;
+    cursor: default; 
+}
+
+.pager__return{
+	float: left;
+	display: inline-block;
+	margin-bottom: 15px;
+	margin-top: 15px;
 }
 

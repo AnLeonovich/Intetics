@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Sign in page</title>
-  <link rel="stylesheet" href="css/login.css?v=1.0" type='text/css'>
-  <script >
-   	function klklklk() {
+  <link rel="stylesheet" href="css/sign.css?v=1.0" type='text/css'>
+ <script >
+   	function autoriz() {
 	var email = document.getElementById("email").value;
 	var password = document.getElementById("password").value;
 	localStorage.setItem("email",email);
@@ -21,7 +21,7 @@
 
     <header class = "header">  
 
-		    <div class = "header__logo"><img src = "img/logo2.png" alt="Image previewer Х" class = "header__logo-img"></div>
+		    <div class = "header__logo"><img src = "img/logo.png" alt="Image previewer Х" class = "header__logo-img"></div>
 		    <div class = "header__text">
 	            <span class = "header__greeting">Welcome to Image Previewer!</span>
 	        </div>
@@ -34,7 +34,7 @@
 		
 	  <div class="signin-wrapper">	
 		<div class="contacts">	
-		<form class = "signin" action="/Users/Nova/Desktop/Тестовое//index.html">	        
+		<form class = "signin" action="/Users/Nova/Desktop/Тестовое/index.html">	        
 	        <span class = "contacts__title"> Sign in </span>                    
 			<label class = "contacts__label" >
 			    <input id="email" type="email" class = "contacts__item" placeholder = "E'mail" required >	
@@ -43,7 +43,7 @@
 			    <input id="password" type = "text" class = "contacts__item" placeholder = "Password" pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
 			</label> 	                    
 		    <label class = "contacts__label">
-	            <input type="submit" class = "contacts__item_button" onclick="klklklk()" value="Login">
+	            <input type="submit" class = "contacts__item_button" onclick="autoriz()" value="Login">
 	        </label> 
 	    </form>
 

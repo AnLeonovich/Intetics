@@ -42,6 +42,7 @@
 
 /*---------------------LOGIN----------------------*/
 
+.signup-wrapper,
 .signin-wrapper{
   margin-top: 50px;
 }
@@ -97,15 +98,18 @@
   box-shadow: none;
 }
 
+.contacts__item_button:hover{
+  background-color: #90be0b;
+}
 
-.contacts__item:invalid  + .contacts__error{
-  visibility: visible;
+.contacts__item_button:focus{
+  outline: none;
+  background-color: #cff365;
 }
 
 .registration__sign-up{
   font-family: Docker, sans-serif;
   font-size: 10px;
-  
 }
 
 .registration{
@@ -115,13 +119,4 @@
   width: 282px;
   background-color: #e3fc97;
   margin: auto;
-}
-
-.contacts__item_button:hover{
-  background-color: #90be0b;
-}
-
-.contacts__item_button:focus{
-  outline: none;
-  background-color: #cff365;
 }

@@ -4,7 +4,13 @@
 <head>
   <meta charset="utf-8">
   <title>Sign in page</title>
-  <link rel="stylesheet" href="css/signup.css?v=1.0" type='text/css'>
+  <link rel="stylesheet" href="css/sign.css?v=1.0" type='text/css'>
+  <script>
+  	function register(){
+  		var username = document.getElementById("username").value;
+  		localStorage.setItem("username",username);
+  	}
+  </script>
 </head>
 
 <body>
@@ -13,7 +19,7 @@
 
     <header class = "header">  
 
-		    <div class = "header__logo"><img src = "img/logo2.png" alt="Image previewer Х" class = "header__logo-img"></div>
+		    <div class = "header__logo"><img src = "img/logo.png" alt="Image previewer Х" class = "header__logo-img"></div>
 		    <div class = "header__text">
 	            <span class = "header__greeting">Welcome to Image Previewer!</span>
 	        </div>
@@ -26,9 +32,9 @@
 
 		<div class="contacts">
 	        <span class = "contacts__title"> Sign up </span>
-	            <form class = "signup">
+	            <form class = "signup" action="/Users/Nova/Desktop/Тестовое/index.html">
                     <label class = "contacts__label">
-			            <input type = "text" class = "contacts__item" placeholder = "Username" pattern="^[a-zA-Z]+$" required>
+			            <input id = "username" type = "text" class = "contacts__item" placeholder = "Username" pattern="^[a-zA-Z]+$" required>
 			        </label>
 			        <label class = "contacts__label" >
 			            <input type="email" class = "contacts__item" placeholder = "E'mail" required>	
@@ -40,7 +46,7 @@
 			            <input type = "text" class = "contacts__item" placeholder = "Retype password" pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
 			        </label> 
 		            <label class = "contacts__label">
-	                    <input type="submit" class = "contacts__item_button" value="Sign me up">
+	                    <input type="submit" class = "contacts__item_button" value="Sign me up" onclick="register()">
 	                </label> 
 		        </form>
 		</div>

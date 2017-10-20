@@ -5,24 +5,88 @@
   <meta charset="utf-8">
   <title>Nastia-2</title>
   <link rel="stylesheet" href="css/style.css?v=1.0" type='text/css'>
- <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
- <!-- <script src="js/jquery.filedrop.js"></script> -->
- <script type="text/javascript"> $(document).ready(function(){
-	document.getElementById("user_name").innerHTML = localStorage.getItem("email");
-	document.getElementById("logo").style.background="url(../img/554.png)";
-});
-</script>
 
+  <!--<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="js/super.js"></script>
+  <script>
+  	$( function() {
+    var availableTags = [
+      "Man",
+      "Magic",
+      "War",
+      "Cats",
+      "Dogs",
+      "Animals",
+      "People",
+      "Woman",
+      "Nature",
+      "Sun",
+      "Forest",
+      "Children",
+      "Sweet",
+      "Country",
+      "Books",
+      "USA",
+      "Building",
+      "Old",
+      "Cars",
+      "Baby",
+      "Day",
+      "Night"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script> -->
 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/super.js"></script>
+  <script>
+  $( function() {
+    var availableTags = [
+      "Man",
+      "Magic",
+      "War",
+      "Cats",
+      "Dogs",
+      "Animals",
+      "People",
+      "Woman",
+      "Nature",
+      "Sun",
+      "Forest",
+      "Children",
+      "Sweet",
+      "Country",
+      "Books",
+      "USA",
+      "Building",
+      "Old",
+      "Cars",
+      "Baby",
+      "Day",
+      "Night"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
 </head>
+
+
 <body>
 
-
- <div class = "wrapper">
+<div class = "wrapper">
 
     <header class = "header">  
 
-		    <div class = "header__logo"><img  src = "img/logo2.png" alt="Image previewer Х" class = "header__logo-img"></div>
+		    <div class = "header__logo"><img  src = "img/logo.png" alt="Image previewer Х" class = "header__logo-img"></div>
 		    <div class = "header__text">
 	            <span class = "header__greeting">Welcome to Image Previewer!</span>
 	            <a id="logo" href="/Users/Nova/Desktop/Тестовое/login.html" class = "header__login-icon"></a>
@@ -33,162 +97,167 @@
     <main>
 
 		<div class = "search">	
-		  <form class="search__form">
-      
-            <input type="search" class="search__field" placeholder="Search by keyword"> 
-            <input type="submit" class="search__button"  value="Search">
 
-        </form>
-        <div class="search__tags">
-          <span class = "search__tags_example"> e.g. </span>
-          <a href="#" class="search__tags_popular"> xxx </a>
-          <a href="#" class="search__tags_popular"> xxx </a>
-          <a href="#" class="search__tags_popular"> xxx </a>
-          <a href="#" class="search__tags_popular"> xxx </a>
-          <a href="#" class="search__tags_popular"> xxx </a>
-          <a href="#" class="search__tags_popular"> xxx </a>
-          <a href="#" class="search__tags_popular"> xxx </a>
-          <a href="#" class="search__tags_popular"> xxx </a>
+		    <form class="search__form">
+                <input type="search" class="search__field" placeholder="Search by keyword" id="tags"> 
+                <input type="submit" class="search__button"  value="Search">
+            </form>
+
+            <div class="search__tags">
+                <span class = "search__tags_example"> e.g. </span>
+                <a href="#" class="search__tags_popular">xxx</a>
+                <a href="#" class="search__tags_popular">xxx</a>
+                <a href="#" class="search__tags_popular">xxx</a>
+                <a href="#" class="search__tags_popular">xxx</a>
+                <a href="#" class="search__tags_popular">xxx</a>
+                <a href="#" class="search__tags_popular">xxx</a>
+                <a href="#" class="search__tags_popular">xxx</a>
+                <a href="#" class="search__tags_popular">xxx</a>
+            </div>
+        
         </div>
-      </div>
 
-    <div class = "images">
+        <div class = "images">
 
-        <div class="images__line clearfix">
+            <div class="images__line clearfix">
 
-            <div class="images__line_item">
-                <div class="images__line_item-img">
-                    <div class="images__line_item-add-picture"></div>
-                <span class="images__line_item-add-text">Add New Image</span>
-                </div>  
-            </div>
-
-            <div class="images__line_item">
-                <div class="images__line_item-img">
-                    <img src="content/03.jpg"   alt="Picture 1" class="images__line_item-img-picture">
+                <div class="images__line_item">
+                    <div class="images__line_item-img" onclick="addpicture()">
+                        <div class="images__line_item-add-picture"></div>
+                    <span class="images__line_item-add-text">Add New Image</span>
+                    </div>  
+                
                 </div>
-            </div>
 
-            <div class="images__line_item">
-                <div class="images__line_item-img">
-                    <img src="content/03.jpg"   alt="Picture 1" class="images__line_item-img-picture">
+                <div class="images__line_item">
+                    <div class="images__line_item-img">
+                        <img src="content/01.jpg"   alt="Image 1" class="images__line_item-img-picture">
+                    </div>
                 </div>
-            </div>
 
-            <div class="images__line_item">
-                <div class="images__line_item-img">
-                    <img src="content/03.jpg"   alt="Picture 1" class="images__line_item-img-picture">
+                <div class="images__line_item">
+                    <div class="images__line_item-img">
+                        <img src="content/02.jpg"   alt="Image 2" class="images__line_item-img-picture">
+                    </div>
                 </div>
-            </div>
+
+                <div class="images__line_item">
+                    <div class="images__line_item-img">
+                        <img src="content/03.jpg"   alt="Image 3" class="images__line_item-img-picture">
+                    </div>
+                </div>
              
-        </div>
-
-
-        <div class="images__line clearfix">
-
-            <div class="images__line_item">
-                <div class="images__line_item-img">
-                    <img src="content/01.jpg"  alt="Picture 1" class="images__line_item-img-picture">
-                </div>
             </div>
+
+
+            <div class="images__line clearfix">
+
+                <div class="images__line_item">
+                    <div class="images__line_item-img">
+                        <img src="content/04.jpg"  alt="Image 4" class="images__line_item-img-picture">
+                    </div>
+                </div>
             
-            <div class="images__line_item">
-                <div class="images__line_item-img">
-                    <img src="content/02.jpg"   alt="Picture 1" class="images__line_item-img-picture">
+                <div class="images__line_item">
+                    <div class="images__line_item-img">
+                        <img src="content/05.jpg"   alt="Image 5" class="images__line_item-img-picture">
+                    </div>
                 </div>
-            </div>
             
-            <div class="images__line_item">
-                <div class="images__line_item-img">
-                    <img src="content/03.jpg"   alt="Picture 1" class="images__line_item-img-picture">
+                <div class="images__line_item">
+                    <div class="images__line_item-img">
+                        <img src="content/06.jpg"   alt="Image 6" class="images__line_item-img-picture">
+                    </div>
                 </div>
-            </div>
-            
-            <div class="images__line_item">
-                <div class="images__line_item-img">
-                    <img src="content/04.jpg"   alt="Picture 1" class="images__line_item-img-picture">
+                
+                <div class="images__line_item">
+                    <div class="images__line_item-img">
+                        <img src="content/07.jpg"   alt="Image 7" class="images__line_item-img-picture">
+                    </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
         
-        <div class="images__line clearfix">
+            <div class="images__line clearfix">
+    
+                <div class="images__line_item">
+                    <div class="images__line_item-img">
+                        <img src="content/08.jpg"  alt="Image 8" class="images__line_item-img-picture">
+                    </div>
+                </div>
+            
+                <div class="images__line_item">
+                    <div class="images__line_item-img">
+                        <img src="content/09.jpg"   alt="Image 9" class="images__line_item-img-picture">
+                    </div>
+                </div>
+            
+                <div class="images__line_item">
+                    <div class="images__line_item-img">
+                        <img src="content/10.jpg"   alt="Image 10" class="images__line_item-img-picture">
+                    </div>
+                </div>
+            
+                <div class="images__line_item">
+                    <div class="images__line_item-img">
+                        <img src="content/11.jpg"   alt="Image 11" class="images__line_item-img-picture">
+                    </div>
+                </div>
 
-            <div class="images__line_item">
-                <div class="images__line_item-img">
-                    <img src="content/01.jpg"  alt="Picture 1" class="images__line_item-img-picture">
-                </div>
             </div>
-            
-            <div class="images__line_item">
-                <div class="images__line_item-img">
-                    <img src="content/02.jpg"   alt="Picture 1" class="images__line_item-img-picture">
-                </div>
-            </div>
-            
-            <div class="images__line_item">
-                <div class="images__line_item-img">
-                    <img src="content/03.jpg"   alt="Picture 1" class="images__line_item-img-picture">
-                </div>
-            </div>
-            
-            <div class="images__line_item">
-                <div class="images__line_item-img">
-                    <img src="content/04.jpg"   alt="Picture 1" class="images__line_item-img-picture">
-                </div>
-            </div>
-
-        </div>
         
-    </div>
-
-
-    <div class="add clearfix">
-    <form enctype="multipart/form-data" method="post">
-        <div class="add__image">
-        	<span class="add__image_title">Add Image</span>
-        	<div class="add__image_dd dropzone" id="dropzone">
-        	    <img src="img/Add.png"   alt="Add-picture" class="add__image_dd-pic">
-        		<span class="add__image_dd-text">Drag in your media</span>
-        		<span class="add__image_dd-text-sign">Find media on your hard drive, then drag them into automatically upload.</span>
- 
-        	</div>
-        	
-            <div class="add__image_db">               
-                <label class="add__image_db-label">Manually select media
-                    <div  class="add__image_db-fakebutton"></div>
-                    <input type="file" class = "add__image_db-button">
-                </label>
-        	</div>
-
         </div>
 
-        <div class="add__info">
-          <span class="add__image_title">Add Info</span>
+
+        <div class="add clearfix" id="addpic">
+
+        <form enctype="multipart/form-data" method="post">
+
+            <div class="add__image">
+        	    <span class="add__image_title">Add Image</span>
+                	<div class="add__image_dd dropzone" id="dropzone">
+        	            <img src="img/Add.png"   alt="Add-picture" class="add__image_dd-pic">
+        		        <span class="add__image_dd-text">Drag in your media</span>
+        		        <span class="add__image_dd-text-sign">Find media on your hard drive, then drag them into automatically upload.</span> 
+        	        </div>
         	
-        	    <label class = "add__info_label"> Name your media
-			        <input type="text" class = "add__info_item" required>	
-			    </label> 					
-	            <label class = "add__info_label"> Add tags
-			        <input type = "text" class = "add__info_item" required>
-			    </label> 	                    
-		        <label class = "add__info_label"> Add description
-		            <textarea class = "add__info_item" rows="7" cols="45" name="text" required></textarea>
-		        </label> 
-		        <label class = "add__info_button">
-	            	<input type="submit" class = "add__info_button-sent" value="Publish">
-	            </label> 
-      
-       	</form>
+                    <div class="add__image_db">               
+                        <label class="add__image_db-label">Manually select media
+                            <div  class="add__image_db-fakebutton"></div>
+                            <input type="file" class = "add__image_db-button">
+                        </label>
+        	        </div>
+            </div>
+
+            <div class="add__info">
+                <span class="add__image_title">Add Info</span>
+                    <div class = "add__image_close" onclick="document.getElementById('addpic').style.display='none';"></div> 
+        	
+        	            <label class = "add__info_label"> Name your media
+			                <input type="text" class = "add__info_item" required>	
+			            </label> 					
+	                    <label class = "add__info_label"> Add tags
+			                <input type = "text" class = "add__info_item" required>
+		        	    </label> 	                    
+		                <label class = "add__info_label"> Add description
+		                    <textarea class = "add__info_item" rows="7" cols="45" name="text" required></textarea>
+		                </label> 
+		                <label class = "add__info_button">
+	                    	<input type="submit" class = "add__info_button-sent" value="Publish" onclick="publish()">	                    	
+	                    </label> 
+            </div>
+        </form>
         </div>
-    </div>
+
+        <div class="pager">
+            <a href="2.html" class="pager__link">
+                <button type ="button" class="pager__button">Next</button>
+            </a>  
+        </div>
+
+    </main>    
 
 </div>
 
-</main>
-
-    <footer>
-    </footer>
- </div>
 </body>		  
 </html>
